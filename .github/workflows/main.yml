@@ -5,19 +5,17 @@ on:
 
 jobs:
   # JOB 1: SAST - Quét mã nguồn tĩnh bằng SonarCloud
-  sast-scan:
-    name: SAST (SonarCloud)
+  sonarqube:
+    name: SonarQube
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # SonarCloud cần lịch sử git đầy đủ để phân tích
-      
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v6
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token có sẵn của GitHub
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}    # Token bạn vừa thêm vào Secret
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   # JOB 2: DAST - Tấn công thử nghiệm bằng OWASP ZAP
   dast-scan:
