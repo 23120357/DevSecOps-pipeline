@@ -30,6 +30,7 @@ jobs:
         with:
           # --- THAY LINK WEB RENDER CỦA BẠN VÀO DÒNG DƯỚI ---
           target: 'https://devsecops-pipeline-e21h.onrender.com/'
+          allow_issue_writing: false  # Tắt tính năng tự tạo Issue để tránh lỗi quyền hạn
           
           # Tùy chọn: Không làm fail pipeline nếu tìm thấy lỗi (để bạn xem được báo cáo)
           fail_action: false 
