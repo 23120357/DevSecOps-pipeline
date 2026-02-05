@@ -9,7 +9,7 @@ jobs:
     name: SAST (SonarCloud)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # SonarCloud cần lịch sử git đầy đủ để phân tích
       
