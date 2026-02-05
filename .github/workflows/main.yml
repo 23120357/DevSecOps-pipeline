@@ -5,7 +5,7 @@ on:
 
 jobs:
   # JOB 1: SAST - Quét mã nguồn tĩnh bằng SonarCloud
-  sonarqube:
+  sast-scan:
     name: SonarQube
     runs-on: ubuntu-latest
     steps:
