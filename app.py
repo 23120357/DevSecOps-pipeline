@@ -2,8 +2,8 @@ import sqlite3
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-# Run
-# LỖI 1 (SAST): Hardcoded Secret
+
+# LỖI 1: Hardcoded Secret
 # Giả vờ đây là key để mã hóa dữ liệu
 SECRET_KEY = "AKIAIOSFODNN7EXAMPLE"
 
@@ -39,7 +39,7 @@ def get_user():
     query = f"SELECT * FROM users WHERE username = '{username}'"
     
     try:
-        print(f"Executing query: {query}") # In log để bạn thấy lệnh SQL
+        print(f"Executing query: {query}") # In log để thấy lệnh SQL
         cursor.execute(query)
         data = cursor.fetchall()
         
