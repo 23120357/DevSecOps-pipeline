@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # LỖI 1 (SAST): Hardcoded Secret
 # Giả vờ đây là key để mã hóa dữ liệu
-SECRET_KEY = "prod_db_password_123456"
+SECRET_KEY = "AKIAIOSFODNN7EXAMPLE"
 
 # Hàm tạo database giả (Chạy mỗi khi khởi động app)
 def init_db():
