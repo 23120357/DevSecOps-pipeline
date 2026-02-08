@@ -1,8 +1,7 @@
 import sqlite3
 from flask import Flask, request, jsonify
-#Run
 app = Flask(__name__)
-# Push code
+
 # LỖI 1: Hardcoded Secret
 # Giả vờ đây là key để mã hóa dữ liệu
 SECRET_KEY = "AKIAIOSFODNN7EXAMPLE"
