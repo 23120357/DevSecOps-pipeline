@@ -26,7 +26,6 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.14.0
         with:
-          # --- THAY LINK WEB RENDER CỦA BẠN VÀO DÒNG DƯỚI ---
           target: 'https://devsecops-pipeline-e21h.onrender.com/'
           allow_issue_writing: false  # Tắt tính năng tự tạo Issue để tránh lỗi quyền hạn
           
